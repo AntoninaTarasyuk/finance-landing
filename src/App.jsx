@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from 'react';
+import './App.css';
+import Header from './components/header/Header';
+import Hero from './components/hero/Hero';
+import About from './components/about/About';
+import Cases from './components/cases/Cases';
+import Blog from './components/blog/Blog';
+import Team from './components/team/Team';
+import Feedback from './components/feedback/Feedback';
+import Footer from './components/footer/Footer';
+import Modal from './components/modal/Modal';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [showModal, setShowModal] = useState(false);
+  const openModal = () => { setShowModal(true); };
+  const closeModal = () => { setShowModal(false); };
+
+  useEffect(() => {
+    document.body.style.overflowY = showModal ? 'hidden' : 'auto';
+  }, [showModal]);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Cases />
+        <Blog />
+        <Team />
+        <Feedback openModal={openModal} />
+      </main>
+      <Footer />
+      {showModal && (
+        <Modal onModalClose={closeModal}>
+          <p>Thank you!<br />
+            Your form submission has been received.<br />
+            Back to our site
+          </p>
+        </Modal>
+      )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
