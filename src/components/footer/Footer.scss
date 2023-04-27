@@ -1,0 +1,36 @@
+.footer {
+  padding: 20px 0;
+  background-color: var(--footer-bg);
+  .footer-socials {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    color: var(--text-color-secondary);
+    @media screen and (min-width: 768px) {
+      margin-bottom: 10px;
+    }
+  }
+  .footer-text {
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--text-color-secondary);
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+  .social-icon {
+    width: 35px;
+    height: 35px;
+    color: #FFFFFF;
+  }
+  .social-link {
+    color: var(--text-color-secondary);
+    transition: color 250ms linear;
+    &:focus, &:hover {
+      color: var(--accent-color);
+    }
+  }
+}
