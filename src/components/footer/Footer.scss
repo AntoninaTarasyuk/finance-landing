@@ -1,0 +1,16 @@
+.footer {
+  padding: 20px 0;
+  color: var(--text-color-secondary);
+  background-color: var(--footer-bg);
+  .footer-text {
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      margin-top: 10px;
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+}
