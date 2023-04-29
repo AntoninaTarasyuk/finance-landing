@@ -20,9 +20,7 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @media screen and (min-width: 1360px) {
-    background-color: #000000;
-  }
+  background-color: #000000;
 }
 
 section {
