@@ -1,17 +1,24 @@
 .feedback-section {
-  padding-top: 51px;
-  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
   @media screen and (min-width: 768px) {
-    padding-top: 32px;
-    padding-bottom: 33px;
-    margin-bottom: 40px;
-  }
-  @media screen and (min-width: 1360px) {
-    padding-top: 56px;
-    padding-bottom: 77px;
-    margin-bottom: 0;
+    flex-direction: row;
   }
   background-color: var(--feedback-bg);
+  .feedback-wrap {
+    padding-top: 51px;
+    padding-bottom: 25px;
+    @media screen and (min-width: 768px) {
+      padding-top: 32px;
+      padding-bottom: 33px;
+      margin-bottom: 40px;
+    }
+    @media screen and (min-width: 1360px) {
+      padding-top: 56px;
+      padding-bottom: 77px;
+      margin-bottom: 0;
+    }
+  }
   .feedback-header {
     font-size: 32px;
     line-height: 48px;

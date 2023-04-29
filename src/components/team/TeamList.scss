@@ -1,6 +1,6 @@
 .team-list {
   display: grid;
-  grid-template-columns: 280px;
+  grid-template-columns: 1fr;
   grid-gap: 30px;
   margin-top: 63px;
   @media screen and (min-width: 768px) {
@@ -17,12 +17,6 @@
     display: flex;
     flex-direction: column;
   }
-  .team-img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
   .team-name {
     margin-top: 16px;
     font-weight: 400;
@@ -35,5 +29,25 @@
   }
   .team-position {
     margin-top: 8px;
+  }
+  .team-img-wrap {
+    position: relative;
+  }
+  .team-social {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 250ms linear;
+    &:hover {
+      opacity: 1;
+    }
   }
 }

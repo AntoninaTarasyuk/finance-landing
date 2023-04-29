@@ -1,39 +1,103 @@
 import './CasesList.scss';
-import cases1 from '../../assets/cases/cases1.jpg';
-import cases2 from '../../assets/cases/cases2.jpg';
-import cases3 from '../../assets/cases/cases3.jpg';
-import cases4 from '../../assets/cases/cases4.jpg';
-import cases5 from '../../assets/cases/cases5.jpg';
-import cases6 from '../../assets/cases/cases6.jpg';
-import cases7 from '../../assets/cases/cases7.jpg';
-import cases8 from '../../assets/cases/cases8.jpg';
 
 function CasesList() {
   return (
     <ul className='cases-list'>
       <li>
-        <img className='cases-img' src={cases1} alt='People in a meeting' />
+        <picture>
+          <source srcSet='../src/assets/cases/cases1.webp 1x, ../src/assets/cases/cases1@2x.webp 2x' type='image/webp' />
+          <img
+            className='cases-img'
+            src='../src/assets/cases/cases1.jpg'
+            srcSet='../src/assets/cases/cases1@2x.jpg 2x'
+            alt='People in a meeting'
+            loading='lazy'
+          />
+        </picture>
       </li>
       <li>
-        <img className='cases-img' src={cases2} alt='Woman with laptop' />
+        <picture>
+          <source srcSet='../src/assets/cases/cases2.webp 1x, ../src/assets/cases/cases2@2x.webp 2x' type='image/webp' />
+          <img
+            className='cases-img'
+            src='../src/assets/cases/cases2.jpg'
+            srcSet='../src/assets/cases/cases1@2x.jpg 2x'
+            alt='Woman with laptop'
+            loading='lazy'
+          />
+        </picture>
       </li>
       <li>
-        <img className='cases-img' src={cases3} alt='Writing in notepad' />
+        <picture>
+          <source srcSet='../src/assets/cases/cases3.webp 1x, ../src/assets/cases/cases3@2x.webp 2x' type='image/webp' />
+          <img
+            className='cases-img'
+            src='../src/assets/cases/cases3.jpg'
+            srcSet='../src/assets/cases/cases3@2x.jpg 2x'
+            alt='Writing in notepad'
+            loading='lazy'
+          />
+        </picture>
       </li>
       <li>
-        <img className='cases-img' src={cases4} alt='Three skyscrapers' />
+        <picture>
+          <source srcSet='../src/assets/cases/cases4.webp 1x, ../src/assets/cases/cases4@2x.webp 2x' type='image/webp' />
+          <img
+            className='cases-img'
+            src='../src/assets/cases/cases4.jpg'
+            srcSet='../src/assets/cases/cases4@2x.jpg 2x'
+            alt='Three skyscrapers'
+            loading='lazy'
+          />
+        </picture>
       </li>
       <li>
-        <img className='cases-img' src={cases5} alt='Shaking hands' />
+        <picture>
+          <source srcSet='../src/assets/cases/cases5.webp 1x, ../src/assets/cases/cases5@2x.webp 2x' type='image/webp' />
+          <img
+            className='cases-img'
+            src='../src/assets/cases/cases5.jpg'
+            srcSet='../src/assets/cases/cases5@2x.jpg 2x'
+            alt='Shaking hands'
+            loading='lazy'
+          />
+        </picture>
       </li>
       <li>
-        <img className='cases-img' src={cases6} alt='Happy people in office' />
+        <picture>
+          <source srcSet='../src/assets/cases/cases6.webp 1x, ../src/assets/cases/cases6@2x.webp 2x' type='image/webp' />
+          <img
+            className='cases-img'
+            src='../src/assets/cases/cases6.jpg'
+            srcSet='../src/assets/cases/cases6@2x.jpg 2x'
+            alt='Happy people in office'
+            loading='lazy'
+          />
+        </picture>
       </li>
       <li>
-        <img className='cases-img' src={cases7} alt='Shaking hands' />
+        <picture>
+          <source srcSet='../src/assets/cases/cases7.webp 1x, ../src/assets/cases/cases7@2x.webp 2x' type='image/webp' />
+          <img
+            className='cases-img'
+            src='../src/assets/cases/cases7.jpg'
+            srcSet='../src/assets/cases/cases7@2x.jpg 2x'
+            alt='Shaking hands'
+            loading='lazy'
+          />
+        </picture>
       </li>
       <li>
-        <img className='cases-img' src={cases8} alt='Happy people in office' />
+        <picture>
+          <source srcSet='../src/assets/cases/cases8.webp 1x, ../src/assets/cases/cases8@2x.webp 2x' type='image/webp' />
+          <img
+            className='cases-img'
+            src='../src/assets/cases/cases8.jpg'
+            srcSet='../src/assets/cases/cases8@2x.jpg 2x'
+            alt='Happy people in office'
+            loading='lazy'
+          />
+        </picture>
       </li>
     </ul>
   );

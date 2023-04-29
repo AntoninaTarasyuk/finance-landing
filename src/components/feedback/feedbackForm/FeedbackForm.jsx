@@ -25,7 +25,7 @@ function FeedbackForm() {
 
   return (
     <FormProvider {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className='form' method='POST' action='/api/feedback'>
+      <form onSubmit={form.handleSubmit(onSubmit)} className='form' method='POST' data-netlify='true'>
         {isLoading && <p>loading...</p>}
         <div className='form-wrap'>
           <label className='form-field'>
@@ -65,10 +65,9 @@ function FeedbackForm() {
           setIsLoading(false);
         }}
         >
-          <p>Thank you!<br />
-            Your form submission has been received.<br />
-            Back to our site
-          </p>
+          <p className='modal-header'>Thank you!</p>
+          <p className='modal-text'>Your form submission has been received.</p>
+          <a className='modal-link' href='./index.html'>Back to our site</a>
         </Modal>
       )}
     </FormProvider>

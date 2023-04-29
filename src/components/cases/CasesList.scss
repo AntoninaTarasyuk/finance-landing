@@ -1,6 +1,6 @@
 .cases-list {
   display: grid;
-  grid-template-columns: 280px;
+  grid-template-columns: 1fr;
   grid-gap: 30px;
   margin-top: 31px;
   @media screen and (min-width: 768px) {
@@ -12,11 +12,5 @@
   @media screen and (min-width: 1360px) {
     grid-gap: 22px;
     margin-top: 36px;
-  }
-  .cases-img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 }

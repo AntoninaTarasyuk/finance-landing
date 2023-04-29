@@ -4,6 +4,16 @@ import Container from '../container/Container';
 function About() {
   return (
     <section id='about' className='about-section'>
+      <picture>
+        <source srcSet='../src/assets/home/people.webp 1x, ../src/assets/home/people@2x.webp 2x' type='image/webp' />
+        <img
+          className='about-img'
+          src='../src/assets/home/people.jpg'
+          srcSet='../src/assets/home/people@2x.jpg 2x'
+          alt='People in the office'
+          loading='lazy'
+        />
+      </picture>
       <Container>
         <div className='about-info'>
           <p className='about-text'>What you are looking for</p>

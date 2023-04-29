@@ -1,0 +1,18 @@
+.socials-list {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  .social-link {
+    display: flex;
+    color: inherit;
+    transition: color 250ms linear;
+    &:focus, &:hover {
+      color: var(--accent-color);
+    }
+  }
+  .social-icon {
+    height: 35px;
+    min-width: 35px;
+    max-width: 40px;
+  }
+}

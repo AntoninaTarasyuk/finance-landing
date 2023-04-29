@@ -11,7 +11,6 @@
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 2;
 }
-
 .modal-window {
   position: relative;
   width: auto;
@@ -19,9 +18,11 @@
   padding: 30px;
   border-radius: 14px;
   background-color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
   text-align: center;
 }
-
 .modal-close-btn {
   position: absolute;
   top: 8px;
@@ -33,4 +34,17 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+.modal-text {
+  margin: 10px 0;
+  font-weight: 400;
+}
+.modal-link {
+  display: block;
+  color: var(--accent-color);
+  transition: transform 250ms linear, color 250ms linear;
+  &:focus, &:hover {
+    transform: scale(120%);
+    color: var(--accent-color-hover);
+  }
 }
