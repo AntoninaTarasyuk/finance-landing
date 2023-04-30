@@ -1,4 +1,4 @@
-.cases-list {
+.gallery-list {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 30px;
@@ -13,7 +13,7 @@
     grid-gap: 22px;
     margin-top: 36px;
   }
-  .cases-img {
+  .gallery-img {
     transition: opacity 250ms linear;
     &:hover {
       opacity: 0.8;

@@ -20,8 +20,14 @@ function Modal(props) {
     };
   }, [handleKeyDown]);
 
+  const handleBackdropClick = (event) => {
+    if (event.currentTarget === event.target) {
+      onModalClose();
+    }
+  };
+
   return createPortal(
-    <div className='modal-overlay'>
+    <div className='modal-overlay' onClick={handleBackdropClick}>
       <div className='modal-window'>
         <button className='modal-close-btn' type='button' onClick={onModalClose} aria-label='Modal window close button'>
           <svg viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'>
