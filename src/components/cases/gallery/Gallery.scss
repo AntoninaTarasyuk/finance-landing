@@ -1,4 +1,4 @@
-.cases-list {
+.lg-react-element {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 30px;
@@ -12,11 +12,5 @@
   @media screen and (min-width: 1360px) {
     grid-gap: 22px;
     margin-top: 36px;
-  }
-  .cases-img {
-    transition: opacity 250ms linear;
-    &:hover {
-      opacity: 0.8;
-    }
   }
 }

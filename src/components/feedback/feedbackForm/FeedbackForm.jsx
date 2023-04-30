@@ -1,14 +1,12 @@
-/* eslint-disable no-console */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import { useEffect, useState } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
-import FormInput from './FormInput';
 import Modal from '../../modal/Modal';
+import FormInput from './FormInput';
 import './FeedbackForm.scss';
-// import { Spinner } from '../../spinner/Spinner';
 
 function FeedbackForm() {
   const form = useForm();
-  const [isLoading, setIsLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const openModal = () => { setShowModal(true); };
   const closeModal = () => { setShowModal(false); };
@@ -18,15 +16,15 @@ function FeedbackForm() {
   }, [showModal]);
 
   const onSubmit = async (data) => {
-    setIsLoading(true);
+    console.log(data);
     openModal();
     form.reset();
   };
 
   return (
     <FormProvider {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className='form' method='POST' data-netlify='true'>
-        {isLoading && <p>loading...</p>}
+      <form onSubmit={form.handleSubmit(onSubmit)} className='form' name='contact' method='POST' data-netlify='true'>
+        <input type='hidden' name='email' value='name_of_my_form' />
         <div className='form-wrap'>
           <label className='form-field'>
             <FormInput
@@ -55,16 +53,12 @@ function FeedbackForm() {
             />
           </label>
         </div>
-        <button type='submit' className='form-btn' disabled={isLoading}>
+        <button type='submit' className='form-btn' aria-label='Form submit button'>
           <p>Send</p>
         </button>
       </form>
       {showModal && (
-        <Modal onModalClose={() => {
-          closeModal();
-          setIsLoading(false);
-        }}
-        >
+        <Modal onModalClose={() => { closeModal(); }}>
           <p className='modal-header'>Thank you!</p>
           <p className='modal-text'>Your form submission has been received.</p>
           <a className='modal-link' href='./index.html'>Back to our site</a>

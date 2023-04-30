@@ -7,7 +7,7 @@
   --feedback-bg: #F4F4F4;
   --footer-bg: #333333;
   --blog-color: #0284D0;
-  --error-color: #b30707;
+  --error-color: #EB5757;
 }
 
 html {
@@ -54,4 +54,11 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff !important;
+}
+.mySwiper {
+  padding-top: 20px;
 }

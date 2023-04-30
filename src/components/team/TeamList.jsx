@@ -7,11 +7,11 @@ function TeamList() {
       <li className='team-item'>
         <div className='team-img-wrap'>
           <picture>
-            <source srcSet='../src/assets/team/person1.webp 1x, ../src/assets/team/person1@2x.webp 2x' type='image/webp' />
+            <source srcSet='../../assets/team/person1.webp 1x, ../../assets/team/person1@2x.webp 2x' type='image/webp' />
             <img
               className='team-img'
-              src='../src/assets/team/person1.jpg'
-              srcSet='../src/assets/team/person1@2x.jpg 2x'
+              src='../../assets/team/person1.jpg'
+              srcSet='../../assets/team/person1@2x.jpg 2x'
               alt='A man named John Doe'
               loading='lazy'
             />
@@ -31,11 +31,11 @@ function TeamList() {
       <li className='team-item'>
         <div className='team-img-wrap'>
           <picture>
-            <source srcSet='../src/assets/team/person2.webp 1x, ../src/assets/team/person2@2x.webp 2x' type='image/webp' />
+            <source srcSet='../../assets/team/person2.webp 1x, ../../assets/team/person2@2x.webp 2x' type='image/webp' />
             <img
               className='team-img'
-              src='../src/assets/team/person2.jpg'
-              srcSet='../src/assets/team/person2@2x.jpg 2x'
+              src='../../assets/team/person2.jpg'
+              srcSet='../../assets/team/person2@2x.jpg 2x'
               alt='A woman named Jane Doe'
               loading='lazy'
             />
@@ -55,11 +55,11 @@ function TeamList() {
       <li className='team-item'>
         <div className='team-img-wrap'>
           <picture>
-            <source srcSet='../src/assets/team/person3.webp 1x, ../src/assets/team/person3@2x.webp 2x' type='image/webp' />
+            <source srcSet='../../assets/team/person3.webp 1x, ../../assets/team/person3@2x.webp 2x' type='image/webp' />
             <img
               className='team-img'
-              src='../src/assets/team/person3.jpg'
-              srcSet='../src/assets/team/person3@2x.jpg 2x'
+              src='../../assets/team/person3.jpg'
+              srcSet='../../assets/team/person3@2x.jpg 2x'
               alt='A man named Steve Smith'
               loading='lazy'
             />

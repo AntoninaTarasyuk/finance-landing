@@ -6,11 +6,11 @@ function Feedback() {
   return (
     <section id='feedback' className='feedback-section'>
       <picture>
-        <source srcSet='../src/assets/home/contact.webp 1x, ../src/assets/home/contact@2x.webp 2x' type='image/webp' />
+        <source srcSet='../../assets/home/contact.webp 1x, ../../assets/home/contact@2x.webp 2x' type='image/webp' />
         <img
           className='feedback-img'
-          src='../src/assets/home/contact.jpg'
-          srcSet='../src/assets/home/contact@2x.jpg 2x'
+          src='../../assets/home/contact.jpg'
+          srcSet='../../assets/home/contact@2x.jpg 2x'
           alt='Man with smartphone'
           loading='lazy'
         />

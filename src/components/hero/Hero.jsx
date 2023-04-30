@@ -1,16 +1,16 @@
 import './Hero.scss';
 import Container from '../container/Container';
-import arrowRight from '../../assets/arrow-right.svg';
 
 function Hero() {
   return (
     <section id='hero' className='hero-section'>
       <picture>
-        <source srcSet='../src/assets/home/showcase.webp 1x, ../src/assets/home/showcase@2x.webp 2x' type='image/webp' />
+        <source srcSet='../../assets/home/showcase.webp 1x, ../../assets/home/showcase@2x.webp 2x' type='image/webp' />
         <img
           className='hero-img'
-          src='../src/assets/home/showcase.jpg'
-          srcSet='../src/assets/home/showcase@2x.jpg 2x'
+          src='../../assets/home/showcase.jpg'
+          srcSet='../../assets/home/showcase@2x.jpg 2x'
+          type='image/jpeg'
           alt='Big city in the night'
           loading='lazy'
         />

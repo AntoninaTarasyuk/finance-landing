@@ -5,11 +5,11 @@ function Blog() {
   return (
     <section id='blog' className='blog-section'>
       <picture>
-        <source srcSet='../src/assets/home/blog.webp 1x, ../src/assets/home/blog@2x.webp 2x' type='image/webp' />
+        <source srcSet='../../assets/home/blog.webp 1x, ../../assets/home/blog@2x.webp 2x' type='image/webp' />
         <img
           className='blog-img'
-          src='../src/assets/home/blog.jpg'
-          srcSet='../src/assets/home/blog@2x.jpg 2x'
+          src='../../assets/home/blog.jpg'
+          srcSet='../../assets/home/blog@2x.jpg 2x'
           alt='Desk with coffee and notebook'
           loading='lazy'
         />
