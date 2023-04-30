@@ -1,15 +1,20 @@
 import './About.scss';
 import Container from '../container/Container';
 
+import people from '../../assets/home/people.jpg';
+import people2x from '../../assets/home/people@2x.jpg';
+import peoplew from '../../assets/home/people.webp';
+import people2xw from '../../assets/home/people@2x.webp';
+
 function About() {
   return (
     <section id='about' className='about-section'>
       <picture>
-        <source srcSet='../src/assets/home/people.webp 1x, ../src/assets/home/people@2x.webp 2x' type='image/webp' />
+        <source srcSet={`${peoplew} 1x, ${people2xw} 2x`} type='image/webp' />
         <img
           className='about-img'
-          src='../src/assets/home/people.jpg'
-          srcSet='../src/assets/home/people@2x.jpg 2x'
+          src={people}
+          srcSet={`${people2x} 2x`}
           alt='People in the office'
           loading='lazy'
         />

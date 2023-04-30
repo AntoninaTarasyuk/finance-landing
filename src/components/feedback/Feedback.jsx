@@ -2,15 +2,20 @@ import './Feedback.scss';
 import Container from '../container/Container';
 import FeedbackForm from './feedbackForm/FeedbackForm';
 
+import contact from '../../assets/home/contact.jpg';
+import contact2x from '../../assets/home/contact@2x.jpg';
+import contactw from '../../assets/home/contact.webp';
+import contact2xw from '../../assets/home/contact@2x.webp';
+
 function Feedback() {
   return (
     <section id='feedback' className='feedback-section'>
       <picture>
-        <source srcSet='../src/assets/home/contact.webp 1x, ../src/assets/home/contact@2x.webp 2x' type='image/webp' />
+        <source srcSet={`${contactw} 1x, ${contact2xw} 2x`} type='image/webp' />
         <img
           className='feedback-img'
-          src='../src/assets/home/contact.jpg'
-          srcSet='../src/assets/home/contact@2x.jpg 2x'
+          src={contact}
+          srcSet={`${contact2x} 2x`}
           alt='Man with smartphone'
           loading='lazy'
         />

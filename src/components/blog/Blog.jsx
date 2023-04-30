@@ -1,15 +1,20 @@
 import './Blog.scss';
 import Container from '../container/Container';
 
+import blog from '../../assets/home/blog.jpg';
+import blog2x from '../../assets/home/blog@2x.jpg';
+import blogw from '../../assets/home/blog.webp';
+import blog2xw from '../../assets/home/blog@2x.webp';
+
 function Blog() {
   return (
     <section id='blog' className='blog-section'>
       <picture>
-        <source srcSet='../src/assets/home/blog.webp 1x, ../src/assets/home/blog@2x.webp 2x' type='image/webp' />
+        <source srcSet={`${blogw} 1x, ${blog2xw} 2x`} type='image/webp' />
         <img
           className='blog-img'
-          src='../src/assets/home/blog.jpg'
-          srcSet='../src/assets/home/blog@2x.jpg 2x'
+          src={blog}
+          srcSet={`${blog2x} 2x`}
           alt='Desk with coffee and notebook'
           loading='lazy'
         />

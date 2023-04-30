@@ -1,6 +1,6 @@
 import './Cases.scss';
 import Container from '../container/Container';
-import CasesList from './CasesList';
+import Gallery from './Gallery';
 
 function Cases() {
   return (
@@ -9,7 +9,7 @@ function Cases() {
         <p>This is what we do</p>
         <h2 className='cases-header'>Business Cases</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, sapiente!</p>
-        <CasesList />
+        <Gallery />
       </Container>
     </section>
   );

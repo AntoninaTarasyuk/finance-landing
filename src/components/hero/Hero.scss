@@ -50,8 +50,10 @@
     border: none;
     cursor: pointer;
     transition: background-color 250ms linear;
+    opacity: 1;
+    transition: opacity 250ms linear;
     &:focus, &:hover {
-      background-color: var(--accent-color-hover);
+      opacity: 0.8;
     }
   }
   .hero-img {

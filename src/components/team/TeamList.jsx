@@ -1,17 +1,32 @@
 import './TeamList.scss';
 import SocialList from '../socials/Socials';
 
+import person1 from '../../assets/team/person1.jpg';
+import person12x from '../../assets/team/person1@2x.jpg';
+import person1w from '../../assets/team/person1.webp';
+import person12xw from '../../assets/team/person1@2x.webp';
+
+import person2 from '../../assets/team/person2.jpg';
+import person22x from '../../assets/team/person2@2x.jpg';
+import person2w from '../../assets/team/person2.webp';
+import person22xw from '../../assets/team/person2@2x.webp';
+
+import person3 from '../../assets/team/person3.jpg';
+import person32x from '../../assets/team/person3@2x.jpg';
+import person3w from '../../assets/team/person3.webp';
+import person32xw from '../../assets/team/person3@2x.webp';
+
 function TeamList() {
   return (
     <ul className='team-list'>
       <li className='team-item'>
         <div className='team-img-wrap'>
           <picture>
-            <source srcSet='../src/assets/team/person1.webp 1x, ../src/assets/team/person1@2x.webp 2x' type='image/webp' />
+            <source srcSet={`${person1w} 1x, ${person12xw} 2x`} type='image/webp' />
             <img
               className='team-img'
-              src='../src/assets/team/person1.jpg'
-              srcSet='../src/assets/team/person1@2x.jpg 2x'
+              src={person1}
+              srcSet={`${person12x} 2x`}
               alt='A man named John Doe'
               loading='lazy'
             />
@@ -31,11 +46,11 @@ function TeamList() {
       <li className='team-item'>
         <div className='team-img-wrap'>
           <picture>
-            <source srcSet='../src/assets/team/person2.webp 1x, ../src/assets/team/person2@2x.webp 2x' type='image/webp' />
+            <source srcSet={`${person2w} 1x, ${person22xw} 2x`} type='image/webp' />
             <img
               className='team-img'
-              src='../src/assets/team/person2.jpg'
-              srcSet='../src/assets/team/person2@2x.jpg 2x'
+              src={person2}
+              srcSet={`${person22x} 2x`}
               alt='A woman named Jane Doe'
               loading='lazy'
             />
@@ -55,11 +70,11 @@ function TeamList() {
       <li className='team-item'>
         <div className='team-img-wrap'>
           <picture>
-            <source srcSet='../src/assets/team/person3.webp 1x, ../src/assets/team/person3@2x.webp 2x' type='image/webp' />
+            <source srcSet={`${person3w} 1x, ${person32xw} 2x`} type='image/webp' />
             <img
-              className='team-img'
-              src='../src/assets/team/person3.jpg'
-              srcSet='../src/assets/team/person3@2x.jpg 2x'
+              className={person3}
+              src={`${person32x} 2x`}
+              srcSet='../../assets/team/person3@2x.jpg 2x'
               alt='A man named Steve Smith'
               loading='lazy'
             />

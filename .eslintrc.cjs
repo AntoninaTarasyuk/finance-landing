@@ -22,5 +22,8 @@ module.exports = {
     'jsx-quotes': ['warn', 'prefer-single'],
     'import/prefer-default-export': 0,
     'react/jsx-one-expression-per-line': 0,
+    'react/jsx-props-no-spreading': 0,
+    'no-alert': 0,
+    'no-console': 0,
   },
 };

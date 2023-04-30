@@ -1,9 +1,23 @@
-import './CasesList.scss';
+import { Navigation, EffectFade } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-function CasesList() {
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
+
+function Slider() {
   return (
-    <ul className='cases-list'>
-      <li>
+    <Swiper
+      className='mySwiper'
+      modules={[Navigation, EffectFade]}
+      spaceBetween={20}
+      slidesPerView={1}
+      speed={800}
+      effect='fade'
+      navigation
+      loop
+    >
+      <SwiperSlide>
         <picture>
           <source srcSet='../src/assets/cases/cases1.webp 1x, ../src/assets/cases/cases1@2x.webp 2x' type='image/webp' />
           <img
@@ -14,8 +28,8 @@ function CasesList() {
             loading='lazy'
           />
         </picture>
-      </li>
-      <li>
+      </SwiperSlide>
+      <SwiperSlide>
         <picture>
           <source srcSet='../src/assets/cases/cases2.webp 1x, ../src/assets/cases/cases2@2x.webp 2x' type='image/webp' />
           <img
@@ -26,8 +40,8 @@ function CasesList() {
             loading='lazy'
           />
         </picture>
-      </li>
-      <li>
+      </SwiperSlide>
+      <SwiperSlide>
         <picture>
           <source srcSet='../src/assets/cases/cases3.webp 1x, ../src/assets/cases/cases3@2x.webp 2x' type='image/webp' />
           <img
@@ -38,69 +52,69 @@ function CasesList() {
             loading='lazy'
           />
         </picture>
-      </li>
-      <li>
+      </SwiperSlide>
+      <SwiperSlide>
         <picture>
           <source srcSet='../src/assets/cases/cases4.webp 1x, ../src/assets/cases/cases4@2x.webp 2x' type='image/webp' />
           <img
             className='cases-img'
             src='../src/assets/cases/cases4.jpg'
             srcSet='../src/assets/cases/cases4@2x.jpg 2x'
-            alt='Three skyscrapers'
+            alt='Writing in notepad'
             loading='lazy'
           />
         </picture>
-      </li>
-      <li>
+      </SwiperSlide>
+      <SwiperSlide>
         <picture>
           <source srcSet='../src/assets/cases/cases5.webp 1x, ../src/assets/cases/cases5@2x.webp 2x' type='image/webp' />
           <img
             className='cases-img'
             src='../src/assets/cases/cases5.jpg'
             srcSet='../src/assets/cases/cases5@2x.jpg 2x'
-            alt='Shaking hands'
+            alt='Writing in notepad'
             loading='lazy'
           />
         </picture>
-      </li>
-      <li>
+      </SwiperSlide>
+      <SwiperSlide>
         <picture>
           <source srcSet='../src/assets/cases/cases6.webp 1x, ../src/assets/cases/cases6@2x.webp 2x' type='image/webp' />
           <img
             className='cases-img'
             src='../src/assets/cases/cases6.jpg'
             srcSet='../src/assets/cases/cases6@2x.jpg 2x'
-            alt='Happy people in office'
+            alt='Writing in notepad'
             loading='lazy'
           />
         </picture>
-      </li>
-      <li>
+      </SwiperSlide>
+      <SwiperSlide>
         <picture>
           <source srcSet='../src/assets/cases/cases7.webp 1x, ../src/assets/cases/cases7@2x.webp 2x' type='image/webp' />
           <img
             className='cases-img'
             src='../src/assets/cases/cases7.jpg'
             srcSet='../src/assets/cases/cases7@2x.jpg 2x'
-            alt='Shaking hands'
+            alt='Writing in notepad'
             loading='lazy'
           />
         </picture>
-      </li>
-      <li>
+      </SwiperSlide>
+      <SwiperSlide>
         <picture>
           <source srcSet='../src/assets/cases/cases8.webp 1x, ../src/assets/cases/cases8@2x.webp 2x' type='image/webp' />
           <img
             className='cases-img'
             src='../src/assets/cases/cases8.jpg'
             srcSet='../src/assets/cases/cases8@2x.jpg 2x'
-            alt='Happy people in office'
+            alt='Writing in notepad'
             loading='lazy'
           />
         </picture>
-      </li>
-    </ul>
+      </SwiperSlide>
+    </Swiper>
   );
 }
 
-export default CasesList;
+export default Slider;
