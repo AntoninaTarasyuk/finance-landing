@@ -8,7 +8,7 @@ function Footer() {
   return (
     <footer className='footer'>
       <Container>
-        <SocialList className='footer-socials' />
+        <SocialList />
         <p className='footer-text'>
           Copyright &copy; {year} - FinanceLedger
         </p>
