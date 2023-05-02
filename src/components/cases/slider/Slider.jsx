@@ -7,7 +7,7 @@ import {
   GalleryItem4,
   GalleryItem5,
   GalleryItem6,
-} from '../GalleryItems';
+} from '../gallery/GalleryItems';
 
 import 'swiper/css';
 import 'swiper/css/navigation';

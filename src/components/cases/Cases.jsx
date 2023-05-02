@@ -1,7 +1,8 @@
 import './Cases.scss';
 import Container from '../container/Container';
-import Gallery from './Gallery';
-import Slider from './slider/Slider';
+// import Gallery from './Gallery';
+// import Slider from './slider/Slider';
+import Gallery from './gallery/Gallery';
 
 function Cases() {
   return (
@@ -11,7 +12,7 @@ function Cases() {
         <h2 className='cases-header'>Business Cases</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, sapiente!</p>
         <Gallery />
-        <Slider />
+        {/* <Slider /> */}
       </Container>
     </section>
   );
