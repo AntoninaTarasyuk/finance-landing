@@ -3,6 +3,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
+import Spinner from '../../spinner/Spinner';
 import './Gallery.scss';
 
 const imgModalRoot = document.querySelector('#modal-root');
@@ -11,6 +12,7 @@ function Modal(props) {
   const {
     onModalClose,
     clickedImg,
+    load,
     disableRightBtn,
     disableLeftBtn,
     handelRotationRight,
@@ -38,6 +40,7 @@ function Modal(props) {
 
   return createPortal(
     <div className='img-modal-overlay' onClick={handleBackdropClick}>
+      {load && <Spinner />}
       {clickedImg}
       <button className='img-modal-close-btn' type='button' onClick={onModalClose} aria-label='Image modal window close button'>
       <svg fill='currentColor' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'>
