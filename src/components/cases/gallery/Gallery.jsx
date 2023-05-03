@@ -4,7 +4,6 @@
 import { useState, useEffect } from 'react';
 import './Gallery.scss';
 import Modal from './ImageModal';
-
 import {
   GalleryItem1,
   GalleryItem2,
@@ -27,16 +26,19 @@ function Gallery() {
   const [disableRight, setDisableRight] = useState(false);
   const [disableLeft, setDisableLeft] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const closeModal = () => {
-    setShowModal(false);
-    setClickedImg(null);
-  };
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     document.body.style.overflowY = showModal ? 'hidden' : 'auto';
   }, [showModal]);
 
+  const closeModal = () => {
+    setShowModal(false);
+    setClickedImg(null);
+  };
+
   const openModal = (image, index) => {
+    setIsLoading(true);
     setShowModal(true);
     setCurrentIdx(index);
     setClickedImg(image);
@@ -48,52 +50,58 @@ function Gallery() {
     if (index === 0) {
       setDisableLeft(true);
     }
+    setTimeout(() => { setIsLoading(false); }, 700);
   };
 
   const handleRotationRight = () => {
-    if (currentIdx === data.length - 1) {
-      setDisableRight(true);
-      return;
-    }
+    setIsLoading(true);
     setDisableRight(false);
     setDisableLeft(false);
     const newIdx = currentIdx + 1;
+    if (newIdx === data.length - 1) {
+      setDisableRight(true);
+    }
     const newImg = data.filter((item) => data.indexOf(item) === newIdx);
     setCurrentIdx(newIdx);
     setClickedImg(newImg);
+    setTimeout(() => { setIsLoading(false); }, 500);
   };
 
   const handleRotationLeft = () => {
-    if (currentIdx === 0) {
-      setDisableLeft(true);
-      return;
-    }
+    setIsLoading(true);
     setDisableLeft(false);
     setDisableRight(false);
     const newIdx = currentIdx - 1;
+    if (newIdx === 0) {
+      setDisableLeft(true);
+    }
     const newImg = data.filter((item) => data.indexOf(item) === newIdx);
     setCurrentIdx(newIdx);
     setClickedImg(newImg);
+    setTimeout(() => { setIsLoading(false); }, 500);
   };
 
   return (
-    <ul className='gallery'>
-      {data.map((imgItem, index) => (
-        <li key={index} className='gallery-item' onClick={() => openModal(imgItem, index)}>
-          {imgItem}
-        </li>
-      ))}
+    <div>
+      <ul className='gallery'>
+        {data.map((imgItem, index) => (
+          <li key={index} className='gallery-item' onClick={() => openModal(imgItem, index)}>
+            {imgItem}
+          </li>
+        ))}
+      </ul>
       {clickedImg && (
         <Modal
           onModalClose={closeModal}
           clickedImg={clickedImg}
+          load={isLoading}
           disableRightBtn={disableRight}
           disableLeftBtn={disableLeft}
           handelRotationRight={handleRotationRight}
           handelRotationLeft={handleRotationLeft}
         />
       )}
-    </ul>
+    </div>
   );
 }
 

@@ -1,6 +1,5 @@
 import './Cases.scss';
 import Container from '../container/Container';
-// import Gallery from './Gallery';
 // import Slider from './slider/Slider';
 import Gallery from './gallery/Gallery';
 
