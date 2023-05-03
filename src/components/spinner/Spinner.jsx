@@ -1,4 +1,5 @@
 import { Circles } from 'react-loader-spinner';
+import './Spinner.scss';
 
 function Spinner() {
   return (
